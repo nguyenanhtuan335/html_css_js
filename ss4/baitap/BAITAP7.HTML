@@ -6,15 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <ul>
-        <h1> Tìm Kiếm Sản Phẩm </h1>
-    <ul>
-             Từ khóa tìm kiếm :<br>
-             <td><label for=" Từ khóa tìm kiếm "></label></td>
-             <td><input type="text" name=" Từ khóa tìm kiếm " id=" Từ khóa tìm kiếm "></td>
-    </ul>
-            Loại sản phẩm:
-
-    
+    <h1>Tìm kiếm sản phẩm</h1>
+    <form action="">
+        <div>
+            <label for="Tìm kiếm">Từ khóa tìm kiếm:</label><br>
+            <input type="search" name="Tìm kiếm" id="Tìm kiếm">
+        </div>
+        <div>
+            <br>
+            <label for="Loại sản phẩm">Loại sản phẩm:</label><br>
+            <select name="Loại sản phẩm" id="Loại sản phẩm">
+                <option value="ĐT">Điện tử</option>
+                <option value="GD">Gia dụng</option>
+                <option value="TB">Thiết bị</option>
+                <option value="ĐD">Đồ dùng công nghệ</option>
+            </select>
+        </div>
+        <div>
+            <br>
+            <input type="submit" value="Tìm Kiếm">
+        </div>
+    </form>
 </body>
 </html>
