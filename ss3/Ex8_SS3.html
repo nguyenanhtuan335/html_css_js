@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="HoTen">Họ và tên:</label></td>
+                <td><input type="text" name="HoTen" id="HoTen"></td>
+            </tr>
+            <tr>
+                <td><label for="Ngaysinh">Ngày sinh:</label></td>
+                <td><input type="date" name="Ngaysinh" id="Ngaysinh"></td>
+            </tr>
+            <tr>
+                <td><label for="Gioitinh">Giới tính:</label></td>
+                <td><input type="radio" name="Gioitinh" id="Gioitinh">Nam
+                    <input type="radio" name="Gioitinh" id="Gioitinh">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td><label for="CCCD">Số căn cước công dân:</label></td>
+                <td><input type="text" maxlength="12"></td>
+            </tr>
+            <tr>
+                <td><label for="NgayCap">Ngày cấp:</label></td>
+                <td><input type="date" name="NgayCap" id="NgayCap"></td>
+            </tr>
+            <tr>
+                <td><label for="NoiCap">Nơi Cấp:</label></td>
+                <td><input type="text" name="NoiCap" id="NoiCap"></td>
+            </tr>
+            <tr>
+                <td><label for="SDT">Số điện thoại:</label></td>
+                <td><input type="tel" name="SDT" id="SDT"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="DiaChiThuongTru">Địa chỉ thường trú:</label></td>
+                <td><textarea name="DiaChiThuongTru" id="DiaChiThuongTru" cols="20" rows="2"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="DiaChiTamTru">Địa chỉ tạm trú:</label></td>
+                <td><textarea name="DiaChiTamTru" id="DiaChiTamTru" cols="20" rows="2"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="LoaiCCCD">Loại căn cước công dân:</label></td>
+                <td><input type="radio">Căn cước công dân mới
+                    <input type="radio">Căn cước công dân cũ
+                </td>
+            </tr>
+            <tr>
+                <td><label for="DanToc">Dân tộc:</label></td>
+                <td><input type="text" name="DanToc" id="DanToc"></td>
+            </tr>
+            <tr>
+                <td><label for="TonGiao">Tôn Giáo:</label></td>
+                <td><input type="text" name="TonGiao" id="TonGiao"></td>
+            </tr>
+            <tr>
+                <td><label for="QuocTich">Quốc tịch:</label></td>
+                <td><input type="text" name="QuocTich" id="QuocTich"></td>
+            </tr>
+            <tr>
+                <td><label for="HoTenChaMe">Họ tên Cha/Mẹ:</label></td>
+                <td><input type="text" name="HoTenChaMe" id="HoTenChaMe"></td>
+            </tr>
+            <tr>
+                <td><label for="CCCDChaMe">Số căn cước công dân Cha/Mẹ:</label></td>
+                <td><input type="text" maxlength="12" name="CCCDChaMe" id="CCCDChaMe" value="Việt Nam"></td>
+            </tr>
+            <tr>
+                <td><label for="TinhTP">Tỉnh/Thành phố:</label></td>
+                <td><select name="TinhTP" id="TinhTP">
+                        <option value="Hà Nội">Hà Nội</option>
+                        <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                        <option value="Hải Phòng">Hải Phòng</option>
+                        <option value="Đà Nẵng">Đà Nẵng</option>
+                        <option value="Cần Thơ">Cần Thơ</option>
+                        <option value="An Giang">An Giang</option>
+                        <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                        <option value="Bắc Giang">Bắc Giang</option>
+                        <option value="Bắc Kạn">Bắc Kạn</option>
+                        <option value="Bắc Ninh">Bắc Ninh</option>
+                        <option value="Bến Tre">Bến Tre</option>
+                        <option value="Bình Dương">Bình Dương</option>
+                        <option value="Bình Định">Bình Định</option>
+                        <option value="Bình Phước">Bình Phước</option>
+                        <option value="Bình Thuận">Bình Thuận</option>
+                        <option value="Cà Mau">Cà Mau</option>
+                        <option value="Cao Bằng">Cao Bằng</option>
+                        <option value="Đắk Lắk">Đắk Lắk</option>
+                        <option value="Đắk Nông">Đắk Nông</option>
+                        <option value="Điện Biên">Điện Biên</option>
+                        <option value="Đồng Nai">Đồng Nai</option>
+                        <option value="Đồng Tháp">Đồng Tháp</option>
+                        <option value="Gia Lai">Gia Lai</option>
+                        <option value="Hà Giang">Hà Giang</option>
+                        <option value="Hòa Bình">Hòa Bình</option>
+                        <option value="Hậu Giang">Hậu Giang</option>
+                        <option value="Hưng Yên">Hưng Yên</option>
+                        <option value="Khánh Hòa">Khánh Hòa</option>
+                        <option value="Kiên Giang">Kiên Giang</option>
+                        <option value="Kon Tum">Kon Tum</option>
+                        <option value="Lai Châu">Lai Châu</option>
+                        <option value="Lâm Đồng">Lâm Đồng</option>
+                        <option value="Lạng Sơn">Lạng Sơn</option>
+                        <option value="Long An">Long An</option>
+                        <option value="Nam Định">Nam Định</option>
+                        <option value="Nghệ An">Nghệ An</option>
+                        <option value="Ninh Bình">Ninh Bình</option>
+                        <option value="Ninh Thuận">Ninh Thuận</option>
+                        <option value="Phú Thọ">Phú Thọ</option>
+                        <option value="Phú Yên">Phú Yên</option>
+                        <option value="Quảng Bình">Quảng Bình</option>
+                        <option value="Quảng Nam">Quảng Nam</option>
+                        <option value="Quảng Ngãi">Quảng Ngãi</option>
+                        <option value="Quảng Ninh">Quảng Ninh</option>
+                        <option value="Quảng Trị">Quảng Trị</option>
+                        <option value="Sóc Trăng">Sóc Trăng</option>
+                        <option value="Sơn La">Sơn La</option>
+                        <option value="Tây Ninh">Tây Ninh</option>
+                        <option value="Thái Bình">Thái Bình</option>
+                        <option value="Thái Nguyên">Thái Nguyên</option>
+                        <option value="Thanh Hóa">Thanh Hóa</option>
+                        <option value="Thừa Thiên - Huế">Thừa Thiên - Huế</option>
+                        <option value="Tiền Giang">Tiền Giang</option>
+                        <option value="Trà Vinh">Trà Vinh</option>
+                        <option value="Tuyên Quang">Tuyên Quang</option>
+                        <option value="Vĩnh Long">Vĩnh Long</option>
+                        <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                        <option value="Yên Bái">Yên Bái</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Gửi thông tin"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
