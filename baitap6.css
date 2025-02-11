@@ -1,0 +1,38 @@
+.style-text{
+    background-color: #F4F4F0;
+    color: #D6506E;
+}
+
+.centerboder{
+    padding: 10px;
+    background-color:white;
+    border: 3px solid green ;
+}
+
+.box{
+    background-color: #E5E9ED;
+    border: 3px solid #E5E9ED;
+}
+.minbox{
+    margin: 20px;
+    border-left: 5px solid green;
+    background-color: white;
+    padding: 20px;
+}
+.d1{
+    color: #A15D5F;
+}
+.d2{
+    margin-left: 10px;
+    color: red;
+}
+.d22{
+    margin-left: 5px;
+    color: blue;
+}
+.button{
+    margin-left: 20px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
