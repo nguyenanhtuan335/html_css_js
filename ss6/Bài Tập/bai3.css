@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  .choose{
+    padding-right: 10px;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+   button{
+    color: white;
+    height: 60px;
+    background-color:rgb(45, 45, 45);
+    width: 370px;
+    border-radius: 10px;
+    border: none;
+}
+   .menu{
+    text-align: right;
+    width: 1201px;
+}
+.bailam{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+    background-color: white;
+    padding-left: 20px;
+    height: 150px;
+    font-weight: 600;
+}
+    .noidung2{
+    font-size: 21px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 200px;
+    background-color: rgb(231, 231, 231);
+    font-weight: 600;
+}
+        .image{
+    padding-left: 81px;
+    width:201px;
+    vertical-align: middle;
+    padding-bottom: 20px;
+    padding-top: 19px;
+}
+
+.information{
+    height: 100px;
+    padding-top: 35px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(231, 231, 231);
+}
+.tieude1{
+    color: white;
+    padding-top: 30px;
+    height: 100px;
+    font-size: 32px;
+    background-color: rgb(46, 46, 44);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tieudetext{
+    padding-left: 10px;
+}
