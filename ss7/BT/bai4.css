@@ -1,0 +1,30 @@
+*{
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+.ke{
+    margin-right: 10px;
+    border-left: 10px solid #FF6116;
+}
+.Anh{
+    margin-bottom: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+.Tdanh{
+    height: 20px;
+    width: 400px;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    top: 490px;
+    left: 10px;
+}
+.baomoi{
+    font-weight: bold;
+    text-decoration: none;
+}

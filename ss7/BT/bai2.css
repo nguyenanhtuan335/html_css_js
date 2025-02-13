@@ -1,0 +1,32 @@
+* {
+    background-color: #F3F2F6;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.box {
+    margin-top: 50px;
+    margin-left: 15px;
+    text-align: center;
+    width: 260px;
+    height: 150px;
+    border: 1px solid #C5C0D4;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.Tde {
+    font-weight: bold;
+    font-size: 20px;
+    color: #BC242B;
+}
+
+.Ndung {
+    font-size: 16px;
+    color: #241852;
+}
