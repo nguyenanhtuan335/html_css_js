@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content-wrapper{
+    width: 600px;
+    height: 500px;
+    background-color: white;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header-section{
+    width: 600px;
+    height: 180px;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    padding-top: 30px;
+    color: rgb(146, 146, 146);
+    opacity: 0.7;
+}
+.header-section .headline{
+    padding-bottom: 30px ;
+    font-size: 28px;
+    font-weight: 540;
+}
+.header-section .description{
+    line-height: 25px;
+}
+.divider{
+    width: 80px;
+    height: 1px;
+    background-color: rgb(217, 216, 216);
+    position: absolute;
+    left: 260px;
+}
+.action-buttons{
+    height: 120px;
+    background-color: rgb(245, 245, 245);
+    padding-top: 40px;
+    border-bottom: 1px solid rgb(217, 216, 216) ;
+}
+.download-button{
+    width: 120px;
+    height:40px;
+    background-color: rgb(49, 152, 255) ;
+    color: white;
+    font-size: 16px;
+    font-weight: 550;
+    border: none;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+.learn-more-button{
+    width: 120px;
+    opacity: 0.7;
+    height:40px;
+    color: rgb(146, 146, 146);
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 550;
+    border: 1px solid rgb(146, 146, 146);
+}
+.footer-section{
+    height: 218px;
+    background-color: rgb(228, 228, 228);
+    padding-top: 30px;
+    line-height: 40px;
+}
+.social-media-icons{
+    font-size: 28px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    color: rgb(146, 146, 146);
+    opacity: 0.7;
+}
+.credits{
+    color: rgb(146, 146, 146);
+    opacity: 0.7;
+}
+.credits a{
+    color: rgb(146, 146, 146);
+    opacity: 0.7;
+}
