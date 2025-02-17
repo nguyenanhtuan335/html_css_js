@@ -1,0 +1,33 @@
+* {
+    margin: 1;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 750px;
+    height: 150px;
+    gap: 5px;
+}
+
+.box .child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 180px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #3498DB;
+    color: white;
+}
+
+.box .child:nth-child(5){
+    flex-grow: 0.94;
+}
