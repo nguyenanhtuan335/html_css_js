@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #7ea9ffba;
+    gap: 30px;
+    width: 550px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+section .container {
+    width: 500px;
+}
+
+section .container div{
+    display: flex;
+    flex-direction: row;
+    width: 560px;
+}
+
+section .container .avt {
+    display: flex;
+    gap: 10px;
+}
+
+section .container .avt p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+section .container .avt img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+section .container .time {
+    color: gray;
+}
+
+section .container .title {
+    font-weight: bold;
+}
+
+section .container .content {
+    color: rgb(71, 70, 70);
+}
+
+section .container .photo img {
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+}
+
+section .container .photo button {
+    position: absolute;
+    top: 32px;
+    left: 430px;
+    width: 80px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0) ;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}

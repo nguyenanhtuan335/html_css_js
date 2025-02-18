@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+section {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section .container .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+}
+
+section .container button {
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 60px;
+    font-weight: bold;
+    font-size: 20px;
+}

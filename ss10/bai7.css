@@ -1,0 +1,154 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #f7f7f7;
+  }
+
+.more-button {
+    background-color: #888; 
+    color: #fff;           
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .sports-news-container {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; 
+    background-color: #fff;
+  }
+  .more-btn {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+ 
+  .recent-news {
+    flex: 1;
+  }
+  
+  .recent-news h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+
+  .featured-card {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .featured-card img {
+    width: 100%;
+    display: block;
+  }
+  
+  .featured-info {
+    padding: 10px 15px;
+  }
+  
+  .featured-info span {
+    display: block;
+    font-size: 0.9rem;
+    color: #ff5722; 
+    margin-bottom: 5px;
+  }
+  
+  .featured-info h3 {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.4;
+  }
+  
+
+  .other-news {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .news-item {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .news-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  
+  .news-text {
+    padding: 10px;
+  }
+  
+  .news-text p {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .news-text h4 {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .clubs-ranking {
+    flex: 1;
+  }
+  
+  .clubs-ranking h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  .clubs-ranking table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .clubs-ranking thead {
+    background-color: #eee;
+  }
+  
+  .clubs-ranking th, .clubs-ranking td {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .clubs-ranking tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .clubs-ranking th {
+    font-weight: bold;
+    color: #333;
+  }
+  
