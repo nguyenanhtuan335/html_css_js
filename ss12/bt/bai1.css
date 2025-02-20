@@ -1,0 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.form-select {
+    background-color: tomato;
+    color: aliceblue;
+    left: 200px; 
+}

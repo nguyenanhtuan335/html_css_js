@@ -1,0 +1,15 @@
+
+.icon {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.card-text {
+    font-size: 9px;
+}
+
+.card-title {
+    margin-top: 20px;
+    height: 75px;
+}
