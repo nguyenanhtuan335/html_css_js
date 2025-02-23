@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+.promo-banner {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+.promo-banner a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+.card {
+    border: none;
+}
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer input {
+    max-width: 300px;
+}
+.footer .social-icons a {
+    margin: 0 10px;
+}
+.collapse-navbar-collapse{
+    text-align: center;
+
+}
+.collapse-navbar-collapse{
+    text-align: center;
+}
