@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Nhập</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .login-container {
+           width: 260px;
+           padding: 20px;
+           border: 2px solid black;
+           position: absolute;
+           left: 20px; 
+           top: 50px; 
+           text-align: left;
+          }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 230px; 
+            padding: 5px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+        }
+        button {
+            width: 70px; 
+            padding: 5px;
+            background-color:rgb(128, 128, 128);
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        const fixedUsername = "huanrose@gmail.com";
+        const fixedPassword = "123456";
+
+        const enteredUsername = document.getElementById("username").value;
+        const enteredPassword = document.getElementById("password").value;
+
+        if (enteredUsername === fixedUsername && enteredPassword === fixedPassword) {
+            console.log("Đăng nhập thành công!");
+        } else {
+            console.log("Đăng nhập thất bại!");
+        }
+    });
+</script>
+
+</body>
+</html>

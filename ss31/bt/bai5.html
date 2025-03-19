@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách nhân viên</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: white;
+        }
+        h1 {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Danh sách nhân viên</h1>
+
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>ADDRESS</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+   const employees = [
+    { id: 1, 
+      name: 'John',
+      age: 18,
+      address: 'New York' },
+    { id: 2,
+      name: 'Mike ',
+      age: 22,
+      address: 'Canada' },
+    { id: 3,
+     name: 'Linda',
+     age: 19,
+     address: 'California ' },
+     { id: 4,
+      name: 'Peter ',
+      age: 25 ,
+      address: 'London ' },
+    { id: 5,
+     name: 'Tony',
+     age: 17 ,
+     address: 'New York' },
+        ];
+
+        function renderTable() {
+            const tableBody = document.querySelector("#employeeTable tbody");
+            tableBody.innerHTML = "";
+
+            employees.forEach(employee => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${employee.id}</td>
+                    <td>${employee.name}</td>
+                    <td>${employee.age}</td>
+                    <td>${employee.address}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+        renderTable();
+    </script>
+
+</body>
+</html>

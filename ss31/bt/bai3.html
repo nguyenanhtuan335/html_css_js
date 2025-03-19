@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            border: 2px solid black;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+
+        .green { background-color: green; color: white; }
+        .red { background-color: red; color: white; }
+        .purple { background-color: plum; color: black; }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="colorBox">
+        <h3>Change Background Color</h3>
+        <p>Mouse Click</p>
+        <div class="box green" data-color="green">xanh</div>
+        <div class="box red" data-color="red">đỏ</div>
+        <div class="box purple" data-color="plum">tím</div>
+    </div>
+
+    <script>
+        document.querySelectorAll(".box").forEach(box => {
+            box.addEventListener("click", function() {
+                document.getElementById("colorBox").style.backgroundColor = this.getAttribute("data-color");
+            });
+        });
+    </script>
+
+</body>
+</html>
