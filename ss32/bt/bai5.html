@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List K24_PTIT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .addBtn {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            min-width: 70px;
+        }
+
+        .addBtn:hover {
+            background-color: darkgreen;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .deleteBtn {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .deleteBtn:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>To-Do List K24_PTIT</h2>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Nhập nhiệm vụ...">
+            <button class="addBtn" onclick="addTask()">Thêm</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        function addTask() {
+            let taskInput = document.getElementById("taskInput");
+            let taskText = taskInput.value.trim();
+
+            if (taskText === "") {
+                alert("Vui lòng nhập nhiệm vụ!");
+                return;
+            }
+
+            let ul = document.getElementById("taskList");
+            let li = document.createElement("li");
+
+            li.innerHTML = `
+                <span>${taskText}</span>
+                <button class="deleteBtn" onclick="deleteTask(this)">X</button>
+            `;
+
+            ul.appendChild(li);
+            taskInput.value = "";
+        }
+
+        function deleteTask(button) {
+            let confirmDelete = confirm("Bạn có chắc chắn muốn xóa nhiệm vụ này?");
+            if (confirmDelete) {
+                let li = button.parentElement;
+                li.remove();
+            }
+        }
+    </script>
+
+</body>
+</html>
