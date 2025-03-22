@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            font-weight: bold;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            resize: none;
+        }
+        .counter {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: gray;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <textarea id="textInput" placeholder=""></textarea>
+    <div class="counter" id="charCount">0 ký tự</div>
+    <button onclick="checkLength()">Kiểm tra</button>
+
+    <script>
+        function checkLength() {
+            const text = document.getElementById('textInput').value;
+            const length = text.length;
+            document.getElementById('charCount').textContent = `${length} ký tự`;
+        }
+    </script>
+</body>
+</html>

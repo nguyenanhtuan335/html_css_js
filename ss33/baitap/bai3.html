@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        select, button {
+            padding: 10px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .product-item {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <select id="categorySelect">
+        <option value="">-- Lựa chọn danh mục --</option>
+        <option value="Đồ ăn">Đồ ăn</option>
+        <option value="Nước">Nước</option>
+        <option value="Dụng cụ">Dụng cụ</option>
+    </select>
+    <button onclick="filterProducts()">Lọc</button>
+
+    <ul id="productList"></ul>
+
+    <script>
+        const products = [
+            { name: 'Rau sạch',
+            category: 'Đồ ăn' },
+            { name: 'Thịt lợn',
+            category: 'Đồ ăn' },
+            { name: 'Pepsi không calo',
+            category: 'Nước' },
+            { name: 'Cocacola',
+            category: 'Nước' },
+            { name: 'Cờ lê',
+            category: 'Dụng cụ' },
+            { name: 'Tuy vít',
+            category: 'Dụng cụ' },
+        ];
+
+        function filterProducts() {
+            const category = document.getElementById('categorySelect').value;
+            const productList = document.getElementById('productList');
+            productList.innerHTML = '';
+
+            const filteredProducts = category ? 
+                products.filter(p => p.category === category) : 
+                products;
+
+            filteredProducts.forEach(product => {
+                const li = document.createElement('li');
+                li.className = 'product-item';
+                li.innerHTML = `<b>Tên đồ ăn:</b> ${product.name} - <b>Danh mục:</b> ${product.category}`;
+                productList.appendChild(li);
+            });
+        }
+
+        window.onload = filterProducts;
+    </script>
+</body>
+</html>

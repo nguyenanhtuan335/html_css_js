@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Toggle</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center; 
+            align-items: flex-start; 
+            height: 100vh;
+            background-color: #f5f5f5;
+            padding-top: 50px; 
+         }
+
+
+        .password-container {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 350px;
+            
+        }
+        .password-input {
+            flex: 1;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            outline: none;
+        }
+        .toggle-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .toggle-button img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="password-container">
+        <input type="password" placeholder="Enter your password" class="password-input" id="passwordInput">
+        <button class="toggle-button" onclick="togglePassword()">
+            <img src="https://cdn-icons-png.flaticon.com/512/709/709612.png" alt="Toggle Visibility" id="toggleIcon">
+        </button>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('passwordInput');
+            const toggleIcon = document.getElementById('toggleIcon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.src = 'https://cdn-icons-png.flaticon.com/512/709/709586.png';
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.src = 'https://cdn-icons-png.flaticon.com/512/709/709612.png';
+            }
+        }
+    </script>
+</body>
+</html>
