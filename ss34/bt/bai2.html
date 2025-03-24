@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid gray;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            color: black;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+
+        #taskForm {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #taskForm input,
+        #taskForm select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #taskForm button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #taskForm button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Task Management</h2>
+    <form id="taskForm">
+        <input type="text" id="content" placeholder="Content" required>
+        <input type="date" id="dueDate" required>
+        <select id="status">
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+        </select>
+        <input type="text" id="assignedTo" placeholder="Assigned to" required>
+        <button type="submit">Submit</button>
+    </form>
+    <table id="taskTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Content</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Assigned To</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        let tasks = JSON.parse(localStorage.getItem('tasks')) || [
+            {
+                id: 1,
+                content: 'Learn Javascript Session 01',
+                dueDate: '2023-04-17',
+                status: 'Pending',
+                assignedTo: 'Anh Bách'
+            },
+            {
+                id: 2,
+                content: 'Learn Javascript Session 2',
+                dueDate: '2023-04-17',
+                status: 'Pending',
+                assignedTo: 'Lâm'
+            },
+            {
+                id: 3,
+                content: 'Learn CSS Session 1',
+                dueDate: '2023-04-17',
+                status: 'Pending',
+                assignedTo: 'Hiếu Cứ ớt ởt'
+            }
+        ];
+
+        function renderTasks() {
+            const tbody = document.querySelector('#taskTable tbody');
+            tbody.innerHTML = '';
+            tasks.forEach((task, index) => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${task.content}</td>
+                        <td>${task.dueDate}</td>
+                        <td>${task.status}</td>
+                        <td>${task.assignedTo}</td>
+                        <td>
+                            <button onclick="editTask(${task.id})">Edit</button>
+                            <button onclick="deleteTask(${task.id})">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        function addTask(event) {
+            event.preventDefault();
+            const content = document.getElementById('content').value;
+            const dueDate = document.getElementById('dueDate').value;
+            const status = document.getElementById('status').value;
+            const assignedTo = document.getElementById('assignedTo').value;
+
+            const newTask = {
+                id: Date.now(),
+                content,
+                dueDate,
+                status,
+                assignedTo
+            };
+
+            tasks.push(newTask);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            renderTasks();
+            event.target.reset();
+        }
+
+        function deleteTask(id) {
+            tasks = tasks.filter(task => task.id !== id);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            renderTasks();
+        }
+
+        function editTask(id) {
+            const task = tasks.find(task => task.id === id);
+            if (task) {
+                document.getElementById('content').value = task.content;
+                document.getElementById('dueDate').value = task.dueDate;
+                document.getElementById('status').value = task.status;
+                document.getElementById('assignedTo').value = task.assignedTo;
+                deleteTask(id);
+            }
+        }
+        document.getElementById('taskForm').addEventListener('submit', addTask);
+
+renderTasks();
+</script>
+</body>
+
+</html>
+
